@@ -8,7 +8,7 @@ void fn_string(va_list s)
 {
 	char *s;
 
-	s = va_arg(va_list, char *);
+	s = va_arg(s, char *);
 	_puts(s);
 }
 /**
@@ -20,7 +20,7 @@ void fn_char(va_list c)
 {
 	char c;
 
-	c = va_arg(va_list, char);
+	c = va_arg(c, char);
 	_putchar(c);
 }
 

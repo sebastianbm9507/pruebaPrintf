@@ -23,3 +23,4 @@ void fn_char(va_list c)
 	c = va_arg(va_list, char);
 	_putchar(c);
 }
+

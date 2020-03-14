@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	/** my variables */
-	int i, j;
+	int i, j, num_chars = 0;
 	/** initialize my list */
 	va_list args;
 	/** instance to my code */
@@ -19,24 +19,26 @@ int _printf(const char *format, ...)
 	/** starting my list */
 	va_start(args, format);
 
-		/** iterating format */
-		for (i = 0; format[i] != '\0'; i++)
+	/** iterating format */
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		/** checking if format is % */
+		if (format[i] == '%')
 		{
-			/** checking if format is % */
-			if (format[i] == '%')
+			i++;
+			for (j = 0; j < 2; j++)
 			{
-				i++;
-				for (j = 0; j < 2; j++)
+				if (format[i] == *fns[j].identifier)
 				{
-					if (format[i] == *fns[j].identifier)
-					{
-						fns[j].f(args);
-					}	
-				}
-			}
-			else
-			{
-				_putchar(format[i]);
+					num_chars += fns[j].f(args);
+				}	
 			}
 		}
+		else
+		{
+			_putchar(format[i]);
+			num_chars += 1;
+		}
+	}
+	return (num_chars);
 }

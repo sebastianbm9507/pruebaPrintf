@@ -21,8 +21,5 @@ int fn_string(va_list s);
 int fn_char(va_list c);
 int _strlen(char *s);
 
-
-
-
 /** end if */
 #endif

@@ -26,3 +26,4 @@ int fn_char(va_list list)
 	return (1);
 }
 
+

@@ -13,6 +13,11 @@ typedef struct structformat
 	void (*f) (va_list);
 } prinf;
 
+/** function prototypes */
+int _printf(const char *format, ...);
+void fn_string(va_list s);
+void fn_char(va_list c);
+
 
 
 

@@ -1,14 +1,14 @@
-#include <holberton.h>
+#include "holberton.h"
 /**
  * fn_string - print string that enter as parameter
  * @s: string argument
  * Return: void
  */
-void fn_string(va_list s)
+void fn_string(va_list list)
 {
 	char *s;
 
-	s = va_arg(s, char *);
+	s = va_arg(list, char *);
 	_puts(s);
 }
 /**
@@ -16,11 +16,11 @@ void fn_string(va_list s)
  * @c: char argument
  * Return: void
  */
-void fn_char(va_list c)
+void fn_char(va_list list)
 {
 	char c;
 
-	c = va_arg(c, char);
+	c = va_arg(list, int);
 	_putchar(c);
 }
 

@@ -23,12 +23,12 @@ int _printf(const char *format, ...)
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			/** checking if format is % */
-			if (format[i] == "%")
+			if (format[i] == '%')
 			{
 				i++;
-				for (i = 0; j < 2; j++)
+				for (j = 0; j < 2; j++)
 				{
-					if (format[i] == fns[j]->identifier)
+					if (format[i] == *fns[j].identifier)
 					{
 						fns[j].f(args);
 					}	

@@ -14,6 +14,8 @@ typedef struct structformat
 } prinf;
 
 /** function prototypes */
+void _puts(char *str);
+int _putchar(char c);
 int _printf(const char *format, ...);
 void fn_string(va_list s);
 void fn_char(va_list c);

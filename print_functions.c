@@ -4,23 +4,25 @@
  * @s: string argument
  * Return: void
  */
-void fn_string(va_list list)
+int fn_string(va_list list)
 {
 	char *s;
 
 	s = va_arg(list, char *);
 	_puts(s);
+	return (_strlen(s));
 }
 /**
  * fn_char - print char that enter as parameter
  * @c: char argument
  * Return: void
  */
-void fn_char(va_list list)
+int fn_char(va_list list)
 {
 	char c;
 
 	c = va_arg(list, int);
 	_putchar(c);
+	return (1);
 }
 

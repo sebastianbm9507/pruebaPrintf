@@ -9,12 +9,13 @@
  */
 int main(void)
 {
-	char len;
+	char *grade;
 	char *len2;
+	int len3 = 0;
 	
-	len = 'c';
+        grade = "camila";
 	len2 = "Hola";
-	_printf("%c", len);
-	printf("%c", len);
+	len3 = _printf("%sisa%s\n", "Fred", grade);
+	printf("%d\n", len3);
 	return (0);
 }

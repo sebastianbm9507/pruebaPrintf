@@ -34,4 +34,5 @@ void print_num(int number);
 int take_num(int number);
 int fn_int(int x);
 /** end if */
+
 #endif

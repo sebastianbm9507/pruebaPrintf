@@ -47,6 +47,8 @@ int validate_odd(const char *format, int *i, va_list args, int num_percentages)
 	prinf fns[] = {
 		{"s", fn_string},
 		{"c", fn_char},
+		{"d", fn_decimal},
+		{"i", fn_integer},
 		{NULL, NULL}
 	};
 	int counter = 0, num_chars2 = 0, j;

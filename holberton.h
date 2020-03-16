@@ -22,6 +22,8 @@ int fn_string(va_list s);
 int fn_char(va_list c);
 int _strlen(char *s);
 int check_percent(const char *format, int *, va_list);
-
+/** Decimals and integer functions */
+int fn_decimal(va_list list);
+int fn_integer(va_list list);
 /** end if */
 #endif

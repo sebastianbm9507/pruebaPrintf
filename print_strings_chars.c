@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * fn_string - print string that enter as parameter
- * @s: string argument
- * Return: void
+ * @list: va_list argument
+ * Return: length of list
  */
 int fn_string(va_list list)
 {
@@ -14,8 +14,8 @@ int fn_string(va_list list)
 }
 /**
  * fn_char - print char that enter as parameter
- * @c: char argument
- * Return: void
+ * @list: va_list argument
+ * Return: length of list
  */
 int fn_char(va_list list)
 {

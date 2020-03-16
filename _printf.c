@@ -1,22 +1,14 @@
 #include "holberton.h"
-#define BUFFERSIZE 1024
 /**
- *
- *
- *
- *
- *
- */
-
-/**
- * main - Entry point
- *
- * Return: Always 0
+ * _printf - Prints according to a format specified
+ * @format: conts char * argument
+ * Return: length of printed character
  */
 int _printf(const char *format, ...)
 {
 	/** my variables */
-	int i, j, num_chars = 0;
+	int i, num_chars = 0;
+	/** pointer to i */
 	int *pi = &i;
 	/** initialize my list */
 	va_list args;
@@ -33,20 +25,25 @@ int _printf(const char *format, ...)
 		/** checking if format is % */
 		if (format[i] == '%')
 		{
-			num_chars += check_percent(format, pi, args); /** check the number of percentages symbols to print*/
+			/** go to function check percent */
+			num_chars += check_percent(format, pi, args);
+			/** check if return is -1 means error */
 			if (num_chars == -1)
 			{
 				return (-1);
 			}
 		}
+		/** means that format[i] is not % */
 		else
 		{
+			/** prints letter before % */
 			_putchar(format[i]);
+			/** counts the number pf characters to be printed */
 			num_chars += 1;
 		}
 	}
-	if (format[i] == '\0' && args != NULL)
-		return (-1);
+	/** ends the list */
 	va_end(args);
+	/** returns the num of char printed */
 	return (num_chars);
 }

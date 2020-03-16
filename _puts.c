@@ -1,9 +1,7 @@
 #include "holberton.h"
 /**
  * _puts - prints a string followed by a new line.
- *
  * @str: pointer parameter to a char type.
- *
  * Return: void.
  */
 void _puts(char *str)
@@ -15,6 +13,4 @@ void _puts(char *str)
 		_putchar(*(str + i));
 		i++;
 	}
-	/*_putchar('\n');*/
 }
-

@@ -30,6 +30,8 @@ int check_percent(const char *format, int *, va_list);
 int validate_even(const char *format, int *i, va_list args, int num_percent);
 int validate_odd(const char *format, int *i, va_list args, int num_percent);
 int valid_percentage(int num_percent);
-
+void print_num(int number);
+int take_num(int number);
+int fn_int(int x);
 /** end if */
 #endif

@@ -27,7 +27,9 @@ int main(void)
 	//_printf("String:[%s]\n", "I am a string !");
 	//printf("String:[%s]\n", "I am a string !");
 	_printf("String:[%d]\n", 12345);*/
-	_printf("Length:[%d, %i]\n", 6, 7);
+	_printf("%c\n");
+	_printf("hol%c %s %i\n",'a', "como estas?", 234);
+
 	_printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
 	_printf("String:[%d]\n", 12345);

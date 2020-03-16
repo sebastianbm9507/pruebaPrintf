@@ -22,11 +22,11 @@ void print_num(int number)
 	if (number / 10)
 	{
 		print_num(number / 10);
-		putchar((number % 10) + '0');
+		_putchar((number % 10) + '0');
 	}
 	else
 	{
-		putchar((number % 10) + '0');
+		_putchar((number % 10) + '0');
 	}
 }
 /**
@@ -43,7 +43,7 @@ int fn_int(va_list args)
 	if (x < 0)
 	{
 		num = -x;
-		putchar('-');
+		_putchar('-');
 		print_num(num);
 		rtn = take_num(num);
 		rtn += 1;
@@ -51,7 +51,7 @@ int fn_int(va_list args)
 	}
 	else if (x == 0)
 	{
-		putchar(0);
+		_putchar(0);
 		return (1);
 	}
 	else

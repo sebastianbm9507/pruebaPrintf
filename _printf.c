@@ -1,4 +1,13 @@
 #include "holberton.h"
+#define BUFFERSIZE 1024
+/**
+ *
+ *
+ *
+ *
+ *
+ */
+
 /**
  * main - Entry point
  *
@@ -8,30 +17,26 @@ int _printf(const char *format, ...)
 {
 	/** my variables */
 	int i, j, num_chars = 0;
+	int *pi = &i;
 	/** initialize my list */
 	va_list args;
-	/** instance to my code */
-	prinf fns[] =
-	{
-		{"s", fn_string},
-		{"c", fn_char}
-	};
 	/** starting my list */
 	va_start(args, format);
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	/** iterating format */
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		/** checking if format is % */
 		if (format[i] == '%')
 		{
-			i++;
-			for (j = 0; j < 2; j++)
+			num_chars += check_percent(format, pi, args); /** check the number of percentages symbols to print*/
+			if (num_chars == -1)
 			{
-				if (format[i] == *fns[j].identifier)
-				{
-					num_chars += fns[j].f(args);
-				}	
+				return (-1);
 			}
 		}
 		else
@@ -40,5 +45,8 @@ int _printf(const char *format, ...)
 			num_chars += 1;
 		}
 	}
+	if (format[i] == '\0' && args != NULL)
+		return (-1);
+	va_end(args);
 	return (num_chars);
 }

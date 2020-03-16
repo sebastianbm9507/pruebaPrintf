@@ -32,7 +32,7 @@ int validate_odd(const char *format, int *i, va_list args, int num_percent);
 int valid_percentage(int num_percent);
 void print_num(int number);
 int take_num(int number);
-int fn_int(int x);
+int fn_int(va_list args);
 /** end if */
 
 #endif

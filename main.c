@@ -33,5 +33,9 @@ int main(void)
 	_printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
 	_printf("String:[%d]\n", 12345);
+
+	/*_printf("%b\n", -98);*/
+	_printf("%b\n", -98);
+
 	return (0);
 }

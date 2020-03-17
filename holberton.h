@@ -33,6 +33,8 @@ int valid_percentage(int num_percent);
 void print_num(int number);
 int take_num(int number);
 int fn_int(va_list args);
+int fn_bin(va_list args);
+int fn_octal(va_list num);
 /** end if */
 
 #endif

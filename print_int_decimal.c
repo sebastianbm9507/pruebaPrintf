@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- *
- *
- *
+ * take_num - determine number characters printed
+ * @number: number given as parameter
+ * Return: number of characters printed
  */
 int take_num(int number)
 {
@@ -11,11 +11,12 @@ int take_num(int number)
 		return (1 + take_num(number / 10));
 	}
 	else
-		return(1);
+		return (1);
 }
 /**
- *
- *
+ * print_num - print the number given as parameter
+ * @number: number given as parameter
+ * Return: void
  */
 void print_num(int number)
 {
@@ -30,9 +31,9 @@ void print_num(int number)
 	}
 }
 /**
- *
- *
- *
+ * fn_int - print numbers
+ * @args: list of parameters
+ * Return: number of numbers printed
  */
 int fn_int(va_list args)
 {

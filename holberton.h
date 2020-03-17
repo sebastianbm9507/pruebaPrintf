@@ -35,6 +35,11 @@ int take_num(int number);
 int fn_int(va_list args);
 int fn_bin(va_list args);
 int fn_octal(va_list num);
+int take_num_un(unsigned int number);
+int fn_un(va_list args);
+void print_num_un(unsigned int number);
+int fn_Hexa(va_list args);
+int fn_hexa(va_list args);
 /** end if */
 
 #endif

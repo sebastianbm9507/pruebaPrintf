@@ -40,6 +40,8 @@ int fn_un(va_list args);
 void print_num_un(unsigned int number);
 int fn_Hexa(va_list args);
 int fn_hexa(va_list args);
+int fn_rev(va_list args);
+int fn_rot13(va_list args);
 /** end if */
 
 #endif

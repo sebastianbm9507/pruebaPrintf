@@ -60,6 +60,8 @@ int validate_odd(const char *format, int *i, va_list args, int num_percent)
 		{"u", fn_un},
 		{"X", fn_Hexa},
 		{"x", fn_hexa},
+		{"r", fn_rev},
+		{"R", fn_rot13},
 		{NULL, NULL}
 	};
 	int counter = 0, num_chars2 = 0, j;
@@ -107,6 +109,8 @@ int validate_even(const char *format, int *i, va_list args, int num_percent)
 		{"u", fn_un},
 		{"X", fn_Hexa},
 		{"x", fn_hexa},
+		{"r", fn_rev},
+		{"R", fn_rot13},
 		{NULL, NULL}
 	};
 	int counter = 0, num_chars2 = 0, j;

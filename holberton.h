@@ -42,6 +42,7 @@ int fn_Hexa(va_list args);
 int fn_hexa(va_list args);
 int fn_rev(va_list args);
 int fn_rot13(va_list args);
+int not_match(int num_percent);
 /** end if */
 
 #endif

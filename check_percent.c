@@ -23,8 +23,8 @@ int check_percent(const char *format, int *i, va_list args)
 			result = validate_odd(format, i, args, num_percent);
 		}
 		else
-		{
-			return (-1);
+		{	/**return (-1);*/
+			result += 0;
 		}
 	}
 	else
@@ -85,7 +85,7 @@ int validate_odd(const char *format, int *i, va_list args, int num_percent)
 	}
 	if (fns[counter].identifier == NULL) /* Doesn't find any datatype*/
 	{
-		return (-1);
+		num_chars2 += not_match(num_percent);
 	}
 	return (num_chars2);
 }
@@ -154,4 +154,16 @@ int valid_percentage(int num_percent)
 		k++;
 	}
 	return ((num_percent / 2));
+}
+int not_match(int num_percent)
+{
+	int j = 0, k = 0;
+
+	while (j <= ((num_percent - 1) / 2))/**print percentages*/
+	{
+		_putchar('%');
+		j++;
+	}
+	k += (((num_percent - 1) / 2) + 1);
+	return (k);
 }

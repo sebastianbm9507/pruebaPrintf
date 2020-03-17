@@ -35,7 +35,10 @@ int main(void)
 	_printf("String:[%d]\n", 12345);
 
 	/*_printf("%b\n", -98);*/
-	_printf("%b\n", -98);
+	_printf("%b\n", 98);
+	printf("%b\n", 98);
+	_printf("Unsigned octal:[%o]\n", 67);
+    printf("Unsigned octal:[%o]\n", 67);
 
 	return (0);
 }

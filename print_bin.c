@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * fn_bim - print decimal into binary number
- * @arg: argument list
+ * fn_bin - print decimal into binary number
+ * @args: argument list
  * Return: Number of numbers printed
  */
 int fn_bin(va_list args)
